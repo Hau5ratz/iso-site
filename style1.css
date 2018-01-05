@@ -1,0 +1,249 @@
+*{
+	color: #fff;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 15px;
+	transition: .3s;
+}
+body{
+	background-color: #ccc;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+div#main{
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 85%;
+	box-shadow: 0px 13px 20px -5px rgba(0,0,0,.4);
+	z-index: 2;
+}
+table{
+	background-color: #111;
+	width: 65%;
+	height: 100%;
+	left: 0px;
+	z-index: 2;
+	border-collapse: collapse;
+	border: 1px solid #ddd;}
+
+th{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: inline;
+	text-align: center;
+}	
+div#picture{
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	background-color: #222;
+	right: 0px;
+	background-position: center;
+	background-size: cover;
+	z-index: 2;
+}
+div#menu{
+	position: fixed;
+	height: calc(100% - 40px);
+	width: 175px;
+	border: 20px solid #111;
+	background-color: #111;
+	left: -195px;
+	z-index: 2;
+}
+div#menu:hover{
+	left: 0px;
+}
+div#menu a{
+	display: block;
+	padding: 20px;
+	z-index: 2;
+}
+.btn {
+  text-align: center;
+  display: inline-block;
+  margin: 6px;
+  font-size: inherit;
+  line-height: 1.42;
+  padding: 0.5em 1.8em;
+  font-weight: normal;
+  border-width: 2px;
+  border-style: solid;
+  background: transparent;
+  border-radius: 0.2em;
+  cursor: pointer;
+  font-family: "Booster Next FY", "Avenir Next", Avenir, sans-serif;
+  user-select: none;
+  vertical-align: bottom;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+  .btn.btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.8; }
+    .btn.btn-disabled:active {
+      opacity: 0.6; }
+  .btn:active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition-duration: 0.2s; }
+    .btn:active:after {
+      background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.02) 20%, rgba(255, 255, 255, 0)); }
+  .btn:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: rotate(-19deg) translateY(-1.3em) scale(1.05);
+    filter: blur(1px);
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.12) 20%, rgba(255, 255, 255, 0)); }
+
+.btn-primary {
+  /*
+  background-color: #52C11F;
+  color: #E6EAEF;
+  border-color: #439e19;
+  border-bottom-color: #347b14;
+  */
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(255, 36, 0, 0.2); }
+  .btn-primary:hover {
+    background-color: #59d322; }
+  .btn-primary:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(255, 36, 0, 0.1);
+    background-color: #4baf1c;
+    color: #307212; }
+
+.btn-secondary {
+  background-color: #0B44EF;
+  color: #E6EAEF;
+  border-color: #0939c8;
+  border-bottom-color: #072ea1;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(31, 84, 245, 0.2); }
+  .btn-secondary:hover {
+    background-color: #1a51f4; }
+  .btn-secondary:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(31, 84, 245, 0.1);
+    background-color: #0a3edb;
+    color: #072b97; }
+
+.btn-tertiary {
+  background-color: #FF006A;
+  color: #E6EAEF;
+  border-color: #d60059;
+  border-bottom-color: #ad0048;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(255, 26, 121, 0.2); }
+  .btn-tertiary:hover {
+    background-color: #ff1476; }
+  .btn-tertiary:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(255, 26, 121, 0.1);
+    background-color: #eb0062;
+    color: #a30044; }
+
+.btn-tetrary {
+  background-color: #991BE2;
+  color: #E6EAEF;
+  border-color: #8017be;
+  border-bottom-color: #681299;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(163, 48, 230, 0.2); }
+  .btn-tetrary:hover {
+    background-color: #a12ce6; }
+  .btn-tetrary:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(163, 48, 230, 0.1);
+    background-color: #8d19d0;
+    color: #611190; }
+
+.btn-black {
+  background-color: #252730;
+  color: #E6EAEF;
+  border-color: #131419;
+  border-bottom-color: #010202;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(48, 51, 62, 0.2); }
+  .btn-black:hover {
+    background-color: #2e303c; }
+  .btn-black:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(48, 51, 62, 0.1);
+    background-color: #1c1e24;
+    color: black; }
+
+.btn-dark {
+  background-color: #3F4351;
+  color: #E6EAEF;
+  border-color: #2d303a;
+  border-bottom-color: #1b1d23;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(74, 79, 95, 0.2); }
+  .btn-dark:hover {
+    background-color: #484c5c; }
+  .btn-dark:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(74, 79, 95, 0.1);
+    background-color: #363a46;
+    color: #17181d; }
+
+.btn-gray {
+  background-color: #6D6F7F;
+  color: #E6EAEF;
+  border-color: #5a5c69;
+  border-bottom-color: #474953;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(121, 123, 140, 0.2); }
+  .btn-gray:hover {
+    background-color: #77798a; }
+  .btn-gray:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(121, 123, 140, 0.1);
+    background-color: #646574;
+    color: #43444e; }
+
+.btn-light {
+  background-color: #E6EAEF;
+  color: #252730;
+  border-color: #cdd5df;
+  border-bottom-color: #b4c0cf;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.9) inset, 0 40px 20px -20px rgba(255, 255, 255, 0.15) inset, 0 -1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 -40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 9px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 7px 7px 8px -4px rgba(0, 0, 0, 0.1), -7px 7px 8px -4px rgba(0, 0, 0, 0.1), 0 -4px 12px 2px rgba(246, 247, 249, 0.2); }
+  .btn-light:hover {
+    background-color: #f2f4f7; }
+  .btn-light:active {
+    box-shadow: 0 -1px 1px -1px rgba(255, 255, 255, 0.4) inset, 0 -40px 20px -20px rgba(255, 255, 255, 0.1) inset, 0 1px 1px -1px rgba(0, 0, 0, 0.7) inset, 0 40px 20px -20px rgba(0, 0, 0, 0.06) inset, 0 7px 8px -4px rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.2), 7px 7px 8px -4px rgba(0, 0, 0, 0.05), -7px 7px 8px -4px rgba(0, 0, 0, 0.05), 0 -4px 12px 2px rgba(246, 247, 249, 0.1);
+    background-color: #dae0e7;
+    color: #aebbcb; }
+
+.btn-sm {
+  font-size: 0.85em !important; }
+
+.btn-md {
+  font-size: 1.2em !important; }
+
+.btn-lg {
+  font-size: 1.6em !important; }
+
+/* Generated by Font Squirrel (https://www.fontsquirrel.com) on April 27, 2016 */
+@font-face {
+  font-family: 'Booster Next FY';
+  src: url("webfonts/boosternextfy-bold-webfont.eot");
+  src: url("webfonts/boosternextfy-bold-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/boosternextfy-bold-webfont.woff2") format("woff2"), url("webfonts/boosternextfy-bold-webfont.woff") format("woff"), url("webfonts/boosternextfy-bold-webfont.ttf") format("truetype"), url("webfonts/boosternextfy-bold-webfont.svg#booster_next_fybold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Booster Next FY';
+  src: url("webfonts/boosternextfy-regular-webfont.eot");
+  src: url("webfonts/boosternextfy-regular-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/boosternextfy-regular-webfont.woff2") format("woff2"), url("webfonts/boosternextfy-regular-webfont.woff") format("woff"), url("webfonts/boosternextfy-regular-webfont.ttf") format("truetype"), url("webfonts/boosternextfy-regular-webfont.svg#booster_next_fyregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Booster Next FY';
+  src: url("webfonts/boosternextfy-thin-webfont.eot");
+  src: url("webfonts/boosternextfy-thin-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/boosternextfy-thin-webfont.woff2") format("woff2"), url("webfonts/boosternextfy-thin-webfont.woff") format("woff"), url("webfonts/boosternextfy-thin-webfont.ttf") format("truetype"), url("webfonts/boosternextfy-thin-webfont.svg#booster_next_fythin") format("svg");
+  font-weight: 100;
+  font-style: normal; }
